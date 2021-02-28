@@ -3,12 +3,16 @@
     <div class="row">
       <div class="col-md-3">
         <ul class="sidebar-list">
+          <% if current_user && current_user.id != 1 %> 
           <li class="sidebar-item"><%= link_to "Payment", payment_method_path, class: "sidebar-link active" %></li>
+          <% else %>
           <li class="sidebar-item"><%= link_to "Payout", payout_method_path, class: "sidebar-link" %></li>
+          <% end %>
           <li class="sidebar-item"><%= link_to "Notification Settings", notification_settings_path, class: "sidebar-link" %></li>
         </ul>
       </div>
-    
+      
+      <% if current_user && current_user.id != 1 %> 
       <div class="col-md-9">
         <div class="panel panel-default">
           <div class="panel-heading">Payment</div>
@@ -41,6 +45,8 @@
           </div>
         </div>
       </div>
+      <% end %>
+      
     </div>
   </div>
 </section>  

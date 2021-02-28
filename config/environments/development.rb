@@ -61,25 +61,25 @@ Rails.application.configure do
   
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # config.action_cable.url = "wss://airbnbclone.herokuapp.com/cable"
+  # config.action_cable.url = "wss://airbnbwho.herokuapp.com/cable"
   # config.action_cable.url = 'wss://example.com/cable'
   
   config.web_console.whitelisted_ips << "10.240.0.0/16"
   
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_mailer.default_url_options = { host: 'https://a90db91895b3480884872d0bb7b2e5eb.vfs.cloud9.us-east-1.amazonaws.com' }
+  config.action_mailer.default_url_options = { host: 'https://ab63cf22d1164a2bae0b49af92304760.vfs.cloud9.us-east-1.amazonaws.com/' }
 
   # Mailgun Integration
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mailgun.org',
-    port: 2525,
-    domain: 'sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
-    authentication: 'plain',
-    user_name: 'postmaster@sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
-    password: '20e436f9190a67c9fbb9b852ab52cae8'
+    # address: 'smtp.mailgun.org',
+    # port: 2525,
+    # domain: 'sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
+    # authentication: 'plain',
+    # user_name: 'postmaster@sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
+    # password: '20e436f9190a67c9fbb9b852ab52cae8'
   }
 
 end

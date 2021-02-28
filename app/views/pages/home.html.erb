@@ -2,24 +2,36 @@
   <div class="page-header-content py-5">
     <div class="container">
       <div class="row banner">
-        <div class="col-xl-8 col-lg-10 text-center">
-          <h1 class="page-header-title">Awesome Vacation Homes</h1>
-          <h4 class="page-header-text mb-5">Book a Vacation Home for Your Next Getaway</h4>
+        <div class="col-xl-8 text-center">
+          <h1 class="page-header-title">Your Awesome Vacation Home Website Awaits</h1>
+          <h4 class="page-header-text mb-5">Book This Vacation Home for Your Next Getaway</h4>
           <div class="form-row justify-content-center">
             <div class="col-lg-9 col-md-8">
               <div class="form-group mr-0 mr-lg-2">
-                <%= form_tag search_path, method: :get do %>
+                <!--< form_tag search_path, method: :get do %>-->
                 
-                <%= text_field_tag :search, params[:search], placeholder: "Search Homes, Rooms, etc.", class: "form-control", id: "autolocation" %>
+                <!--<= text_field_tag :search, params[:search], placeholder: "Search Homes, Rooms, etc.", class: "form-control", id: "autolocation" %>-->
+              
+              <!--  <= form_tag room_path(id: 1), method: :get do %>-->
+                
+              <!--  <div class="row">-->
+              <!--    <div class="col-md-3">-->
+              <!--      <= text_field_tag :start_date, params[:start_date], placeholder: "Start Date", class: "form-control datepicker" %>-->
+              <!--    </div>-->
+              <!--    <div class="col-md-3">-->
+              <!--      <= text_field_tag :end_date, params[:end_date], placeholder: "End Date", class: "form-control datepicker" %>-->
+              <!--    </div>-->
+              <!--    <div class="col-md-3">-->
+              <!--      <= submit_tag "Search", class: "btn btn-normal btn-block" %>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--  <br/><br/>-->
+              <!--< end %>-->
+
               </div>
             </div>
-            
-            <div class="col-lg-3 col-md-4">
-              <%= submit_tag "Search", class: "btn btn-form btn-block" %>
-            </div>
           </div>
-          <% end %>
-          <p class="page-header-text small mb-0">By signing up, you agree to our <a href="javascript:void(0);">terms of service</a></p>
+          <!--< end %>-->
         </div>
       </div>
     </div>
@@ -35,8 +47,8 @@
 <section class="">
   <div class="container">
     <div class="banner text-center">
-    	<h2 class="text-blue">Homes Near You</h2>
-      <h3>Book and rent a vacation home or room</h3>
+    	<h2 class="text-blue">We Welcome You</h2>
+      <h3>Book Our Entire Vacation Home</h3>
     </div>
     <br/>
       
@@ -51,27 +63,27 @@
   <div class="container">
     <div class="page-section">
     <div class="banner text-center">
-     	<h2 class="text-blue">How AbnbClone Works</h2>
-      <h3>Contact-less Awesomeness</h3>
+     	<h2 class="text-blue">Contact-less Awesomeness</h2>
+      <h3></h3>
     </div>
         
     <div class="row text-center">
       <div class="col-md-4">
       <div class="fas fa-home fa-4x text-blue"></div>
-        <h3 class="my-3">Find a Vacation Home</h3>
-        <p class="text-center">Search for a rental, wait until the host confirm your date, and await your approval. Listings with the <i class="fa fa-bolt" style="color: #ffb400"></i> icon will be booked instantly.</p>
+        <h3 class="my-3">Explor Our Vacation Home</h3>
+        <p class="text-center">Like what you see? We will confirm your date, and await your approval. Listings with the <i class="fa fa-bolt" style="color: #ffb400"></i> icon will be booked instantly.</p>
       </div>
                         
       <div class="col-md-4">
       <div class="fas fa-envelope fa-4x text-blue"></div>
-        <h3>Chat With Host</h3>
-        <p class="text-center">Send a message to your host if you need additional information or just to say thank you. Host will communicate any additional information as needed.</p>
+        <h3>Chat With Us</h3>
+        <p class="text-center">Send a message to your host if you need additional information. Host will communicate any additional information as needed in a timely manner.</p>
       </div>
                         
       <div class="col-md-4">
       <div class="fas fa-credit-card fa-4x text-blue"></div>
        	<h3>Book and Pay</h3>
-       	<p class="text-center">Our calender system helps both host and guest see your reservation day in realtime. Submit your payment will be a breeze through our secure Stripe checkout.</p>
+       	<p class="text-center">Our calender system helps both host and guest see your reservation day in realtime. Submit your payment will be a breeze through our secure online checkout.</p>
       </div>
       
       <div class="row">
@@ -99,7 +111,7 @@
           <div class="col-lg-4">
             <div class="discovery-card" style="background-image: url('/assets/testimonials-1.jpg')" alt="Customer 1"></div>
             <h3>Katy S.</h3>
-            <p class="text-center">So happy I found AbnbClone. I was able to book a girls trip and surprise birthday celebration for my mom where I invited all of her close friends!</p>
+            <p class="text-center">So happy I found this home. I was able to book a girls trip and surprise birthday celebration for my mom where I invited all of her close friends!</p>
           </div>  
       
           <div class="col-lg-4">
@@ -130,12 +142,12 @@
 <!-- CITIES -->
 <section class="">
   <div class="container">
-    <div class="banner text-blue text-center"><h2>AbnbClone will be in other cities soon!</h2></div>
+    <div class="banner text-blue text-center"><h2>Airbnb Who? We will help you create your short-term home and room rental website buisness on your terms!</h2></div>
     <br/>
     
     <div class="row">
       <div class="col-md-4">
-    		<a href="https://www.abnbclone.herokuapp.com/search?utf8=✓&search=chicago">
+    		<a href="https://www.airbnbwho.herokuapp.com/search?utf8=✓&search=chicago">
     			<div class="discovery-card" style="background-image: url('/assets/chicago.jpg')">
     				<div class="va-container">
     					<div class="va-middle text-center">
@@ -147,7 +159,7 @@
     	</div>
     
     	<div class="col-md-4">
-    		<a href="https://www.abnbclone.herokuapp.com/search?utf8=✓&search=atlanta">
+    		<a href="https://www.airbnbwho.herokuapp.com/search?utf8=✓&search=atlanta">
     			<div class="discovery-card" style="background-image: url('/assets/atlanta.jpg')">
     				<div class="va-container">
     					<div class="va-middle text-center">
@@ -159,7 +171,7 @@
     	</div>
     
     	<div class="col-md-4">
-    		<a href="https://www.abnbclone.herokuapp.com/search?utf8=✓&search=dallas">
+    		<a href="https://www.airbnbwho.herokuapp.com/search?utf8=✓&search=dallas">
     			<div class="discovery-card" style="background-image: url('/assets/dallas.jpg')">
     				<div class="va-container">
     					<div class="va-middle text-center">
@@ -174,15 +186,15 @@
 </section>
 
 <script>
-  $('#start_date').datepicker({
-    dateFormat: 'mm/dd/yy',
-    minDate: 0, 
-    maxDate: '12m',
-    onSelect: function(selected) {
-      $('#end_date').datepicker("option", "minDate", selected);
-      $('#end_date').attr("disabled", false);
-    }
-  });
+  // $('#start_date').datepicker({
+  //   dateFormat: 'mm/dd/yy',
+  //   minDate: 0, 
+  //   maxDate: '12m',
+  //   onSelect: function(selected) {
+  //     $('#end_date').datepicker("option", "minDate", selected);
+  //     $('#end_date').attr("disabled", false);
+  //   }
+  // });
   
   // $('#end_date').datepicker({
   //   dateFormat: 'mm/dd/yy',
@@ -193,7 +205,7 @@
   //   }
   // });
 
-  $(function() {
-    $("#autolocation").geocomplete();
-  })
+  // $(function() {
+  //   $("#autolocation").geocomplete();
+  // })
 </script>

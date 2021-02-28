@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
   enum instant: {Request: 0, Instant: 1}
   
-  belongs_to :user, required: false
+  belongs_to :user, required: true
   has_many :photos
   has_many :reservations
   

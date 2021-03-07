@@ -83,7 +83,7 @@ class ReservationsController < ApplicationController
           :description => room.listing_name,
           :currency => "usd", 
           :destination => {
-            :amount => reservation.total * 90, # 90% of the total amount goes to the Host, 10% is company fee
+            :amount => reservation.total * 100, # As a single-tenent app, 100% of the total amount goes to the Host minus Stripe's payment processing fee.
             :account => room.user.merchant_id # room's Stripe customer ID
           }
         )

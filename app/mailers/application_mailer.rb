@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info@airbnbclone.com'
+  default from: 'info@airbnbwho.com'
   layout 'mailer'
 end

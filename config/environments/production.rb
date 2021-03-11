@@ -108,13 +108,13 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
-     address              =>'smtp.gmail.com',
-     port                 => '587',
-     domain               => 'domain.com',
-     user_name            => 'admin@airbnbwho.com',
-     password             => 'password',
-     authentication       => 'plain',
-     enable_starttls_auto => 'true'  }    
+    :address              =>'smtp.gmail.com',
+    :port                 => '587',
+    :domain               => 'domain.com',
+    :user_name            => 'admin@airbnbwho.com',
+    :password             => 'password',
+    :authentication       => 'plain',
+    :enable_starttls_auto => 'true'  }    
   
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)

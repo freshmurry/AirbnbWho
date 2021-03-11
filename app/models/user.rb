@@ -54,7 +54,7 @@ class User < ApplicationRecord
     @client.messages.create(
       from: '+12568264730',
       to: self.phone_number,
-      body: "Your AbnbClone pin is #{self.pin}"
+      body: "Your AirbnbWho pin is #{self.pin}"
     )
   end
 

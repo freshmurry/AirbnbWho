@@ -72,6 +72,11 @@
               <% end %>
               <li><%= link_to "Previous Reservations", previous_reservations_path %></li>
               <li><%= link_to "Current Reservations", current_reservations_path %></li>
+              <% if current_user && current_user.id == 1 %>
+              <li><%= link_to "Host Home", new_room_path %></li>
+              <% else %>
+              
+              <% end %>
               <li role="separator" class="divider"></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
               <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
@@ -89,29 +94,36 @@
       <ul class="nav navbar-nav">
         <li <% if current_page?(current_user) %> class="active" <% end %> ><%= link_to "Profile", current_user %></li>
         <li <% if current_page?(dashboard_path) %> class="active" <% end %> ><%= link_to "Dashboard", dashboard_path %></li>
+        
         <% if current_user && current_user.id != 1 %>
         
         <% else %>
-        <li <% if current_page?(rooms_path) %> class="active" <% end %> ><%= link_to "Manage Listings", rooms_path %></li>
+          <li <% if current_page?(rooms_path) %> class="active" <% end %> ><%= link_to "Manage Listings", rooms_path %></li>
         <% end %>
+        
         <li <% if current_page?(conversations_path) %> class="active" <% end %> ><%= link_to "Messages", conversations_path %></li>
+        
         <% if current_user && current_user.id != 1 %>
         
         <% else %>
-        <li <% if current_page?(revenues_path) %> class="active" <% end %> ><%= link_to "Revenues", revenues_path %></li>
+          <li <% if current_page?(revenues_path) %> class="active" <% end %> ><%= link_to "Revenues", revenues_path %></li>
         <% end %>
-        <li <% if current_page?(current_reservations_path) %> class="active" <% end %> ><%= link_to "Current Reservations", current_reservations_path %></li>
+          <li <% if current_page?(current_reservations_path) %> class="active" <% end %> ><%= link_to "Current Reservations", current_reservations_path %></li>
+        
         <% if current_user && current_user.id != 1 %>
         
         <% else %>
-        <li <% if current_page?(host_calendar_path) %> class="active" <% end %> ><%= link_to "Host Calendar", host_calendar_path %></li>
+          <li <% if current_page?(host_calendar_path) %> class="active" <% end %> ><%= link_to "Host Calendar", host_calendar_path %></li>
         <% end %>
-        <li <% if current_page?(payment_method_path) %> class="active" <% end %> ><%= link_to "Account Settings", payment_method_path %></li>
+        
+        <% if current_user && current_user.id != 1 %>
+          <li <% if current_page?(payment_method_path) %> class="active" <% end %> ><%= link_to "Account Settings", payment_method_path %></li>
+        <% else %>
+          <li <% if current_page?(payout_method_path) %> class="active" <% end %> ><%= link_to "Account Settings", payout_method_path %></li>
+        <% end %>
         
         <% if current_user && current_user.id == 1 %>
-        <button class="btn btn-form btn-small">
-          <%= link_to "Host Your Space", new_room_path, style: "color: white; text-decoration: none;" %>
-        </button>
+          <li <% if current_page?(new_room_path) %> class="active" <% end %> ><%= link_to "Host Home", new_room_path %></li>
         <% else %>
         
         <% end %>

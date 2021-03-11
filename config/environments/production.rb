@@ -49,8 +49,8 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
-  # config.web_socket_server_url = "wss://action-cable-airbnbwho.herokuapp.com/cable"
-  # config.action_cable.allowed_request_origins = ['https://action-cable-airbnbwho.herokuapp.com/cable', 'https://action-cable-airbnbwho.herokuapp.com/cable' ]
+  config.web_socket_server_url = "wss://action-cable-airbnbwho.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://action-cable-airbnbwho.herokuapp.com/cable', 'https://action-cable-airbnbwho.herokuapp.com/cable' ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -90,20 +90,35 @@ Rails.application.configure do
   #Required for Heroku
   # config.action_mailer.default_url_options = { host: 'https://airbnbwho.herokuapp.com' }
 
-  config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.raise_delivery_errors = true
   
-    config.action_mailer.delivery_method = :smtp
-    host = 'airbnbwho.herokuapp.com'
-    config.action_mailer.default_url_options = { host: host }
-    ActionMailer::Base.smtp_settings = {
-      :address        => 'smtp.sendgrid.net',
-      :port           => '587',
-      :authentication => :plain,
-      :user_name      => ENV['SENDGRID_USERNAME'],
-      :password       => ENV['SENDGRID_PASSWORD'],
-      :domain         => 'airbnbwho.herokuapp.com',
-      :enable_starttls_auto => true
-    }
+  #   config.action_mailer.delivery_method = :smtp
+  #   host = 'airbnbwho.herokuapp.com'
+  #   config.action_mailer.default_url_options = { host: host }
+  #   ActionMailer::Base.smtp_settings = {
+  #     :address        => 'smtp.sendgrid.net',
+  #     :port           => '587',
+  #     :authentication => :plain,
+  #     :user_name      => ENV['SENDGRID_USERNAME'],
+  #     :password       => ENV['SENDGRID_PASSWORD'],
+  #     :domain         => 'airbnbwho.herokuapp.com',
+  #     :enable_starttls_auto => true
+  #   }
+    
+    
+  config.action_mailer.default_url_options = { host: 'https://airbnbwho.herokuapp.com/' }
+
+  # Mailgun Integration
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mailgun.org',
+    port: 2525,
+    domain: 'sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
+    authentication: 'plain',
+    user_name: 'postmaster@sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
+    password: '20e436f9190a67c9fbb9b852ab52cae8'
+  }  
   
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
